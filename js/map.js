@@ -1,9 +1,7 @@
 $(function() {
 	
 	var infowindow = null;
-	var pos;
 	var userCords;
-	var tempMarkerHolder = [];
 	
 	//Start geolocation
 	
@@ -15,7 +13,6 @@ $(function() {
 		
 		function success(pos){
 			userCords = pos.coords;
-			console.log(userCords);
 			
 		}
 	
@@ -53,13 +50,10 @@ $(function() {
 	map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
 	//Grab form data
-    $('#chooseZip').submit(function() { // bind function to submit event of form
+    $('#form').submit(function() { // bind function to submit event of form
 		
 		//Define and set meetup api key and url used in api request
-		var apikey = "6b673c65434b970727a504b7f566d3";
 		var accessURL = "https://api.meetup.com/2/open_events?and_text=False&offset=0&format=json&lon=" + userCords.longitude + "&limited_events=False&photo-host=public&page=20&radius=smart&category=34&lat=" + userCords.latitude + "&desc=False&status=upcoming&sig_id=143073552&sig=33aa69d6367a979d803ce9525cdf6bca905cf5db";
-	
-		console.log(accessURL);
 
 		// makes array of the lat and lon of the markers showing
 		// creates a new viewpoint bound
@@ -75,10 +69,8 @@ $(function() {
 				// loop over json data returned
 				$.each(data.results, function(i, val){
 
-					console.log(val);
-
 					var venueObject = val.venue;
-					if(venueObject && venueObject.lat != 0){
+					if(venueObject && venueObject.lat !== 0){
 
 						// google maps marker options
 						var marker = new google.maps.Marker({
@@ -112,8 +104,7 @@ $(function() {
 						bounds.extend(loc);
 
 					} else {
-						console.log("latitude or longitude not found");
-						return
+						return;
 					}
 
 				});
