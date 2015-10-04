@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<title>Local Tech Events Finder</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+  
+	<div id="control">
+		<form method="get" id="chooseZip">
+			<h1>Local Tech Events Finder</h1>
+			<p>Find upcoming local tech events, powered by <a href="http://www.meetup.com/" target='_blank'>Meetup</a>.
+			<br>
+			Just enable geolocation in your browser and click on the "Search Events" button to find your nearest tech events.</p>
+			<button type="submit" class="learnButton">Search events</button>
+		</form>
+	</div>
+	<!-- Google maps is appended to this div -->
+	<div id="map-canvas"></div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key="></script>
+    <script language="javascript" type="text/javascript" src="js/map.js"></script>
+  </body>
+</html>
