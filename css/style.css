@@ -6,13 +6,14 @@ html, body {
 
 
 body {
-	font-family: "Open Sans", sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	position: relative;
+	color: #fff;
 }
 
 a {
 	text-decoration: none;
-	color: #2185C5;
+	color: #F9615B;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -22,7 +23,9 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
 	font-size: 28px;
-	color: #2185C5;
+	color: #fff;
+	font-weight: 800;
+	margin-bottom: 40px;
 }
 
 h2 {
@@ -46,7 +49,8 @@ ul li {
 
 p {
 	margin-bottom: 20px;
-	line-height: 1.5;
+	line-height: 2;
+	color: #fff;
 }
 
 #map-canvas {
@@ -59,20 +63,22 @@ p {
 	left: 0;
 	z-index: 999;
 	color: #3E454C;
-	background-color: rgba(255, 255, 255, 0.6);
-	width: 20%;
-	padding: 80px 30px 50px;
-	border-right: 1px solid #2185C5;
-	border-bottom: 1px solid #2185C5;
+	background-color: #6114CC;
+	width: 400px;
+	height: 100%;
+	padding: 80px 2%;
 }
 
 button {
-	background-color: #FF7F66;
+	background-color: #F9615B;
 	padding: 15px 30px;
-	color: #FFF6E5;
+	color: #fff;
 	font-size: 14px;
 	border: none;
 	margin-top: 20px;
+	font-weight: 700;
+	letter-spacing: 1.5px;
+	outline: none;
 }
 
 .credits {
