@@ -53,7 +53,8 @@ $(function() {
     $('#form').submit(function() { // bind function to submit event of form
 		
 		//Define and set meetup api key and url used in api request
-		var accessURL = "https://api.meetup.com/2/open_events?and_text=False&offset=0&format=json&lon=" + userCords.longitude + "&limited_events=False&photo-host=public&page=20&radius=smart&category=34&lat=" + userCords.latitude + "&desc=False&status=upcoming&sig_id=143073552&sig=33aa69d6367a979d803ce9525cdf6bca905cf5db";
+		var API_KEY = "2d6974785d53707b6d1577717a762c33";
+		var accessURL = "https://api.meetup.com/2/open_events?key=" + API_KEY + "&sign=true&photo-host=public&lat=" + userCords.latitude + "&category=34&lon=" + userCords.longitude + "&page=40&radius=25.0";
 
 		// makes array of the lat and lon of the markers showing
 		// creates a new viewpoint bound
